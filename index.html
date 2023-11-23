@@ -85,10 +85,10 @@
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
             <div class="two" id='kitchen_artist_image'><video  width=100% height=100% muted autoplay loop>
-            <source src="images/zipnerf.mp4" type="video/mp4">
+            <source src="images/kitchen_artist.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video></div>
-            <img src='images/zipnerf.jpg' width="160">
+            <img src='images/kitchen_artist.png' width="160">
           </div>
           <script type="text/javascript">
             function kitchen_artist_start() {
@@ -128,22 +128,7 @@
       <!-- Solid Estimation -->
       <tr onmouseout="solid_estimation_stop()" onmouseover="solid_estimation_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='solid_estimation_image'><video  width=100% height=100% muted autoplay loop>
-            <source src="images/zipnerf.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            </video></div>
-            <img src='images/zipnerf.jpg' width="160">
-          </div>
-          <script type="text/javascript">
-            function solid_estimation_start() {
-              document.getElementById('solid_estimation_image').style.opacity = "1";
-            }
-            function solid_estimation_stop() {
-              document.getElementById('solid_estimation_image').style.opacity = "0";
-            }
-            solid_estimation_stop()
-          </script>
+          <div class="one"><img src='images/solid_estimation.png' width="160"></div>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
           <a href="TBD">
@@ -223,7 +208,22 @@
       <!-- Risk Budget -->
       <tr onmouseout="risk_budget_stop()" onmouseover="risk_budget_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one"><img src='images/risk_budget.png' width="160"></div>
+          <div class="one">
+            <div class="two" id='risk_budget_image'><video  width=100% height=100% muted autoplay loop>
+            <source src="images/risk_budget.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='images/risk_budget.png' width="160">
+          </div>
+          <script type="text/javascript">
+            function risk_budge_start() {
+              document.getElementById('risk_budget_image').style.opacity = "1";
+            }
+            function risk_budget_stop() {
+              document.getElementById('risk_budget_image').style.opacity = "0";
+            }
+            risk_budget_stop()
+          </script>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
           <a href="TBD">
