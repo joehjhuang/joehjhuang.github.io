@@ -80,15 +80,108 @@
         </td>
       </tr>
 
-      <!-- Understanding dynamic tactile sensing for liquid property estimation -->
-      <tr onmouseout="liquid_estimation_stop()" onmouseover="liquid_estimation_start()">
+      <!-- kitchen artist -->
+      <tr onmouseout="kitchen_artist_stop()" onmouseover="kitchen_artist_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
-            <div class="two" id='liquid_estimation_image'><video  width=100% height=100% muted autoplay loop>
+            <div class="two" id='kitchen_artist_image'><video  width=100% height=100% muted autoplay loop>
             <source src="images/zipnerf.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video></div>
             <img src='images/zipnerf.jpg' width="160">
+          </div>
+          <script type="text/javascript">
+            function kitchen_artist_start() {
+              document.getElementById('kitchen_artist_image').style.opacity = "1";
+            }
+            function kitchen_artist_stop() {
+              document.getElementById('kitchen_artist_image').style.opacity = "0";
+            }
+            kitchen_artist_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="TBD">
+            <span class="papertitle">Kitchen Artist: Precise Control of Liquid Dispensing for Gourmet Plating</span>
+          </a>
+          <br>
+          <strong>Hung-Jui Huang</strong>,
+          <a href="https://jingyi-xiang.github.io/">Jingyi Xiang</a>,
+          <a href="http://robotouch.ri.cmu.edu/yuanwz/">Wenzhen Yuan</a>,
+          <br>
+          <em>arXiv, 2023</em> (Submitted to <em>ICRA</em>, 2024) &nbsp
+          <br>
+          <a href="TBD">project page</a>
+          /
+          <a href="TBD">video</a>
+          /
+          <a href="TBD">paper</a>
+          /
+          <a href="TBD">bibtex</a>
+          <p></p>
+          <p>
+            Our sauce plating robot can precisely control the thickness of squeezed liquids on a surface, even when dealing with unseen liquids.
+          </p>
+        </td>
+      </tr>
+
+      <!-- Solid Estimation -->
+      <tr onmouseout="solid_estimation_stop()" onmouseover="solid_estimation_start()">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='solid_estimation_image'><video  width=100% height=100% muted autoplay loop>
+            <source src="images/zipnerf.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='images/zipnerf.jpg' width="160">
+          </div>
+          <script type="text/javascript">
+            function solid_estimation_start() {
+              document.getElementById('solid_estimation_image').style.opacity = "1";
+            }
+            function solid_estimation_stop() {
+              document.getElementById('solid_estimation_image').style.opacity = "0";
+            }
+            solid_estimation_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="TBD">
+            <span class="papertitle">Estimating Properties of Solid Particles Inside Container Using Touch Sensing</span>
+          </a>
+          <br>
+          <a href="https://xiaofeng-guo.github.io/">Xiaofeng Guo</a>,
+          <strong>Hung-Jui Huang</strong>,
+          <a href="http://robotouch.ri.cmu.edu/yuanwz/">Wenzhen Yuan</a>,
+          <br>
+          <em>IROS</em>, 2023 &nbsp
+          <br>
+          <a href="TBD">project page</a>
+          /
+          <a href="TBD">video</a>
+          /
+          <a href="https://arxiv.org/abs/2307.15646">paper</a>
+          /
+          <a href="data/solid_estimation.bib">bibtex</a>
+          <p></p>
+          <p>
+          Estimating solid particle properties (e.g., size and shape) inside a container using tactile and force-torque sensing.
+          </p>
+        </td>
+      </tr>
+
+      <!-- Liquid Estimation -->
+      <tr onmouseout="liquid_estimation_stop()" onmouseover="liquid_estimation_start()">
+        <td style="padding:20px;width:25%;vertical-align:top">
+          <div class="one">
+            <div class="two" id='liquid_estimation_image'>
+              <video  width=100% muted autoplay loop>
+              <source src="images/liquid_estimation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+            </div>
+            <img src='images/liquid_estimation_dyn.jpg' width="160">
+            <img src='images/liquid_estimation_static.png' width="160">
           </div>
           <script type="text/javascript">
             function liquid_estimation_start() {
@@ -100,6 +193,7 @@
             liquid_estimation_stop()
           </script>
         </td>
+
         <td style="padding:20px;width:75%;vertical-align:middle">
           <a href="TBD">
             <span class="papertitle">Understanding Dynamic Tactile Sensing for Liquid Property Estimation</span>
@@ -129,23 +223,7 @@
       <!-- Risk Budget -->
       <tr onmouseout="risk_budget_stop()" onmouseover="risk_budget_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='risk_budget_image'><video  width=100% height=100% muted autoplay loop>
-            <source src="images/zipnerf.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            </video></div>
-            <img src='images/zipnerf.jpg' width="160">
-          </div>
-          <script type="text/javascript">
-            function risk_budget_start() {
-              document.getElementById('risk_budget_image').style.opacity = "1";
-            }
-
-            function risk_budget_stop() {
-              document.getElementById('risk_budget_image').style.opacity = "0";
-            }
-            risk_budget_stop()
-          </script>
+          <div class="one"><img src='images/risk_budget.png' width="160"></div>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
           <a href="TBD">
@@ -179,9 +257,7 @@
       <!-- Omnidirectional CNN -->
       <tr>
         <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <img src='images/omni_cnn.jpg' width="160">
-          </div>
+          <div class="one"><img src='images/omni_cnn.jpg' width="160"></div>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
           <a href="https://aliensunmin.github.io/project/omni-cnn/">
@@ -204,6 +280,8 @@
           <a href="https://github.com/zswang666/Omni-CNN">code</a>
           /
           <a href="https://arxiv.org/abs/1803.04228">arXiv</a>
+          /
+          <a href="ocnn.bib">bibtex</a>
           <p></p>
           <p>
           O-CNN compares omnidirectional visual images to a database of images to determine the robot's location and helps navigation.
