@@ -1,43 +1,250 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Discover NormalFlow: a state-of-the-art system for fast, robust, and accurate 6DoF pose tracking of novel objects using vision-based tactile sensors. Ideal for robotics, in-hand manipulation, manipulation, and 3D reconstruction.">
+  <meta name="keywords" content="6DoF pose tracking, tactile sensing, vision-based tactile sensors, GelSight, NormalFlow, object tracking, robotics, in-hand manipulation, contact-based tracking, 3D reconsruction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NormalFlow: Fast, Robust, and Accurate Contact-based Object 6DoF Pose Tracking with Vision-based Tactile Sensors</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./assets/favicon.gif">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
 <body>
 
 
 <section class="hero">
-  <h1 align="center">
-    NormalFlow: Fast, Robust, and Accurate <br/> Contact-based Object 6DoF Pose Tracking <br/> with Vision-based Tactile Sensors
-</h1>
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-3 publication-title">NormalFlow: Fast, Robust, and Accurate Contact-based Object 6DoF Pose Tracking with Vision-based Tactile Sensors</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://joehjhuang.github.io/">Hung-Jui Huang</a><sup>1</sup>&nbsp;•&nbsp</span>
+            <span class="author-block">
+              <a href="https://www.cs.cmu.edu/~kaess/">Michael Kaess</a><sup>1</sup>&nbsp;•&nbsp</span>
+            <span class="author-block">
+              <a href="https://siebelschool.illinois.edu/about/people/all-faculty/yuanwz">Wenzhen Yuan</a><sup>2</sup>
+            </span>
+          </div>
 
-<div align="center">
-  <a href="https://joehjhuang.github.io/" target="_blank">Hung-Jui Huang</a> &nbsp;•&nbsp;
-  <a href="https://www.cs.cmu.edu/~kaess/" target="_blank">Michael Kaess</a> &nbsp;•&nbsp;
-  <a href="https://siebelschool.illinois.edu/about/people/all-faculty/yuanwz" target="_blank">Wenzhen Yuan</a>
-</div>
+          <div class="is-size-9 publication-authors">
+            <span class="author-block"><sup>1</sup>Carnegie Mellon University &nbsp;&nbsp</span>
+            <span class="author-block"><sup>2</sup>University of Illinois Urbana-Champaign</span>
+          </div>
 
-<h4 align="center">
-  <a href="https://ieeexplore.ieee.org/document/10766628"><img src="assets/ieee.jpg" alt="RA-L" width="28px"/> <b>Paper</b></a> &nbsp;&nbsp;&nbsp; &nbsp;
-  <a href="https://github.com/rpl-cmu/normalflow"><img src="assets/github.png" alt="Code" width="10px"/> <b>Code</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
-  🤗 <a href="https://huggingface.co/datasets/joehjhuang/TactileTracking"> <b>Dataset</b></a>
-</h4>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/document/10766628"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>&nbsp;&nbsp;&nbsp;
+              <span class="link-block">
+                <a href="https://github.com/rpl-cmu/normalflow"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="assets/github.png" alt="Code"/>&nbsp;
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>&nbsp;&nbsp;&nbsp;
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/joehjhuang/TactileTracking"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      🤗 
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
 
-<p align="center">
-    <video width="60%" autoplay loop muted>
-      <source src="videos/tracking.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-</p>
-<p align="center">
-    <video width="60%" autoplay loop muted>
-      <source src="videos/reconstruction.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-</p>
-
-  <h3 align="center">
-    The website is under development. It will be available by 12/10/2024.
-</h3>
-
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <div class="column" style="margin-right: 10px;">
+        <div class="content">
+          <video id="teaser_tracking" autoplay muted loop playsinline>
+            <source src="./videos/tracking.mp4" type="video/mp4">
+          </video>
+          <div class="content" style="margin-top: 10px;">
+            <h2 class="title is-5 has-text-centered">Tactile-based Object Tracking</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="column" style="margin-left: 10px;">
+        <div class="content">
+          <video id="teaser_reconstruction" onmouseover="this.pause()" onmouseout="this.play()" autoplay="" muted="" loop="">
+            <source src="./videos/reconstruction.mp4" type="video/mp4">
+          </video>
+          <div class="content" style="margin-top: 10px;">
+            <h2 class="title is-5 has-text-centered">Tactile-based 3D Reconstruction</h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- TLDR. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            <font size="4"><b>TL;DR</b>: 
+              Real-time, robust, and accurate tactile-based tracking for novel objects,
+              including low-textured ones like ping pong balls and eggs. 
+              Useful for manipulation, in-hand manipulation, and 3D reconstruction tasks.
+            </font>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Overview</h2>
+        <img src="assets/teaser.jpg" alt="teaser_img"/>
+        <div class="content has-text-justified" style="margin-top: 20px">
+          <p>
+            Tactile sensing is crucial for robots aiming to achieve human-level dexterity.
+            Among tactile-dependent skills, tactile-based object tracking serves as the cornerstone 
+            for many tasks, including manipulation, in-hand manipulation, and 3D reconstruction.
+          </p>
+          <p>
+            In this work, we introduce <em><b>NormalFlow</b></em>, a fast, robust, and real-time tactile-based 6DoF 
+            tracking algorithm.
+            Leveraging the precise surface normal estimation of vision-based tactile sensors,
+            NormalFlow determines object movements by minimizing discrepancies between the 
+            tactile-derived surface normals. 
+          </p>
+          <p>
+            Our results show that NormalFlow consistently outperforms competitive baselines and can
+            track low-texture objects like ping pong balls and eggs. 
+            For long-horizon tracking, we demonstrate when rolling the sensor around a bead 
+            for 360 degrees, NormalFlow maintains a rotational tracking error of 2.5 degrees. 
+            Additionally, we present state-of-the-art tactile-based 3D reconstruction results, 
+            showcasing the high accuracy of NormalFlow. 
+            We believe NormalFlow unlocks new possibilities for high-precision perception and 
+            manipulation tasks that involve interacting with objects using hands.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Real-time Tracking Demo</h2>
+        <video id="real-time-demo" width="80%" autoplay muted loop playsinline>
+          <source src="./videos/real_time_demo.mp4" type="video/mp4">
+        </video>
+        <div class="content has-text-justified" style="margin-top: 20px">
+          <p class="has-text-centered">
+            <font size="4">
+              Got a <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a>? Install the <a href="https://github.com/rpl-cmu/normalflow">Code</a> and run NormalFlow live!
+            </font>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Bibtex</h2>
+        <div class="content has-text-justified" style="margin-top: 20px">
+          <pre><code>@ARTICLE{huang2024normalflow,
+    author={Huang, Hung-Jui and Kaess, Michael and Yuan, Wenzhen},
+    journal={IEEE Robotics and Automation Letters}, 
+    title={NormalFlow: Fast, Robust, and Accurate Contact-based Object 6DoF Pose Tracking with Vision-based Tactile Sensors}, 
+    year={2024},
+    volume={},
+    number={},
+    pages={1-8},
+    doi={10.1109/LRA.2024.3505815}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website uses the <a href="https://nerfies.github.io/">Nerfies template</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
