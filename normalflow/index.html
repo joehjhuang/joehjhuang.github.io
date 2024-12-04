@@ -22,6 +22,19 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
+  <script>
+  /**
+   * Function to change the video source
+   * @param {string} newSrc - The new video source URL.
+   */
+  function changeVideo(newSrc) {
+    const video = document.getElementById('change');
+    const source = document.getElementById('changeSource');
+    source.src = newSrc;
+    video.load(); // Reload the video element with the new source
+  }
+</script>
+
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
@@ -154,36 +167,40 @@
 </section>
 
 
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-4">Overview</h2>
+        <h2 class="title is-3">Abstract</h2>
         <img src="assets/teaser.jpg" alt="teaser_img"/>
         <div class="content has-text-justified" style="margin-top: 20px">
           <p>
-            Tactile sensing is crucial for robots aiming to achieve human-level dexterity.
-            Among tactile-dependent skills, tactile-based object tracking serves as the cornerstone 
-            for many tasks, including manipulation, in-hand manipulation, and 3D reconstruction.
+            <font size="4">
+              Tactile sensing is crucial for robots aiming to achieve human-level dexterity.
+              Among tactile-dependent skills, tactile-based object tracking serves as the cornerstone 
+              for many tasks, including manipulation, in-hand manipulation, and 3D reconstruction.
+            </font>
           </p>
           <p>
-            In this work, we introduce <em><b>NormalFlow</b></em>, a fast, robust, and real-time tactile-based 6DoF 
-            tracking algorithm.
-            Leveraging the precise surface normal estimation of vision-based tactile sensors,
-            NormalFlow determines object movements by minimizing discrepancies between the 
-            tactile-derived surface normals. 
+            <font size="4">
+              In this work, we introduce <em><b>NormalFlow</b></em>, a fast, robust, and real-time tactile-based 6DoF 
+              tracking algorithm.
+              Leveraging the precise surface normal estimation of vision-based tactile sensors,
+              NormalFlow determines object movements by minimizing discrepancies between the 
+              tactile-derived surface normals. 
+            </font>
           </p>
           <p>
-            Our results show that NormalFlow consistently outperforms competitive baselines and can
-            track low-texture objects like ping pong balls and eggs. 
-            For long-horizon tracking, we demonstrate when rolling the sensor around a bead 
-            for 360 degrees, NormalFlow maintains a rotational tracking error of 2.5 degrees. 
-            Additionally, we present state-of-the-art tactile-based 3D reconstruction results, 
-            showcasing the high accuracy of NormalFlow. 
-            We believe NormalFlow unlocks new possibilities for high-precision perception and 
-            manipulation tasks that involve interacting with objects using hands.
+            <font size="4">
+              Our results show that NormalFlow consistently outperforms competitive baselines and can
+              track low-texture objects like ping pong balls and eggs. 
+              For long-horizon tracking, we demonstrate when rolling the sensor around a bead 
+              for 360 degrees, NormalFlow maintains a rotational tracking error of 2.5 degrees. 
+              Additionally, we present state-of-the-art tactile-based 3D reconstruction results, 
+              showcasing the high accuracy of NormalFlow. 
+              We believe NormalFlow unlocks new possibilities for high-precision perception and 
+              manipulation tasks that involve interacting with objects using hands.
+            </font>
           </p>
         </div>
       </div>
@@ -195,7 +212,193 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-4">Real-time Tracking Demo</h2>
+        <div class="content">
+          <div class="content">
+            <h2 class="title is-3 has-text-centered">6DoF Object Tracking</h2>
+          </div>
+          <video id="change" autoplay="" muted="" loop="">
+            <source id="changeSource"  src="./videos/results/pingpong.mp4" type="video/mp4">
+          </video>
+          <div class="flexbox">
+              <div>
+                <button onclick="changeVideo('./videos/results/pingpong.mp4')">
+                    <img src="./assets/pingpong.jpg" height="10px" alt="PingPong">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/egg.mp4')">
+                    <img src="./assets/egg.jpg" height="10px" alt="Egg">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/finger.mp4')">
+                    <img src="./assets/finger.jpg" height="10px" alt="Finger">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/key.mp4')">
+                    <img src="./assets/key.jpg" height="10px" alt="Key">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/large_rock.mp4')">
+                    <img src="./assets/large_rock.jpg" height="10px" alt="Large Rock">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/owl.mp4')">
+                    <img src="./assets/owl.jpg" height="10px" alt="Owl">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/passion_fruit.mp4')">
+                    <img src="./assets/passion_fruit.jpg" height="10px" alt="Passion Fruit">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/pen.mp4')">
+                    <img src="./assets/pen.jpg" height="10px" alt="Pen">
+                </button>
+              </div>
+          </div>
+          <div class="flexbox">
+              <div>
+                <button onclick="changeVideo('./videos/results/bead.mp4')">
+                    <img src="./assets/bead.jpg" height="10px" alt="Bead">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/ring.mp4')">
+                    <img src="./assets/ring.jpg" height="10px" alt="Ring">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/scissor.mp4')">
+                    <img src="./assets/scissor.jpg" height="10px" alt="Scissor">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/screw_driver.mp4')">
+                    <img src="./assets/screw_driver.jpg" height="10px" alt="Screw Driver">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/seed.mp4')">
+                    <img src="./assets/seed.jpg" height="10px" alt="Seed">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/small_rock.mp4')">
+                    <img src="./assets/small_rock.jpg" height="10px" alt="Small Rock">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/usb.mp4')">
+                    <img src="./assets/usb.jpg" height="10px" alt="USB">
+                </button>
+              </div>
+              <div>
+                <button onclick="changeVideo('./videos/results/wrench.mp4')">
+                    <img src="./assets/wrench.jpg" height="10px" alt="Wrench">
+                </button>
+              </div>
+          </div>
+          <span>
+            <font size="4">
+              Click on each object to show its tracking result
+            </font>
+          </span>
+        </div>
+        <div class="content has-text-justified" style="margin-top: 20px">
+          <p>
+            <font size="4">
+              We demonstrate NormalFlow tracking a wide variety of objects, including objects like ping pong balls, 
+              which are typically considered texture-less by human standards. NormalFlow can leverage subtle surface
+              textures to robustly track these challenging objects.
+              Quantitatively, it significantly outperforms all existing competitive baseline methods.
+              For further details, please refer to <a href="https://ieeexplore.ieee.org/document/1076662">our paper</a>.
+            </font>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content">
+          <h2 class="title is-3 has-text-centered">Tactile-based 3D Reconstruction</h2>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered is-four-fifths">
+      <div class="column">
+        <video id="teaser_reconstruction" onmouseover="this.pause()" onmouseout="this.play()" autoplay="" muted="" loop="">
+          <source src="./videos/reconstruction.mp4" type="video/mp4">
+        </video>
+        <div class="content" style="margin-top: -10px; display: flex; align-items: center; justify-content: center;">
+          <img src="./assets/reconstruct_bead.png" style="height: 40px;margin-top: 10px; " alt="Bead">
+          <h2 class="title is-4 has-text-centered">&nbsp;&nbsp;&nbspThe Bead</h2>
+        </div>
+      </div>
+      <div class="column">
+        <video id="teaser_reconstruction" onmouseover="this.pause()" onmouseout="this.play()" autoplay="" muted="" loop="">
+          <source src="./videos/reconstruction_ring.mp4" type="video/mp4">
+        </video>
+        <div class="content" style="margin-top: -10px; display: flex; align-items: center; justify-content: center;">
+          <img src="./assets/reconstruct_ring.png" style="height: 40px;margin-top: 10px; " alt="Ring">
+          <h2 class="title is-4 has-text-centered">&nbsp;&nbsp;&nbspThe Ring</h2>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            <font size="4">
+              To demonstrate the power of NormalFlow, we apply it to tactile-based 3D reconstruction.
+              Leveraging NormalFlow's high precision, our reconstructed geometry achieves outstanding quality,
+              accurately capturing fine details of the object.
+            </font>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content">
+          <div class="content">
+            <h2 class="title is-3 has-text-centered">Long-horizon 6DoF Object Tracking</h2>
+          </div>
+          <video id="long_tracking" autoplay="" muted="" loop="">
+            <source src="./videos/long_tracking.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <font size="4">
+              For long-horizon tracking, we propose an effective keyframe selection strategy to minimize drift.
+            </font>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Real-time Tracking Demo</h2>
         <video id="real-time-demo" width="80%" autoplay muted loop playsinline>
           <source src="./videos/real_time_demo.mp4" type="video/mp4">
         </video>
@@ -210,11 +413,37 @@
     </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-4">Bibtex</h2>
+        <div class="content">
+          <div class="content">
+            <h2 class="title is-3 has-text-centered">The TactileTracking Dataset</h2>
+          </div>
+          <video id="dataset" autoplay="" muted="" loop="">
+            <source src="./videos/dataset.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <font size="4">
+              We present a benchmark <a href="https://huggingface.co/datasets/joehjhuang/TactileTracking">dataset</a> for tactile-based object tracking, featuring 12 distinct objects
+              and 84 tracking trials—7 trials per object, each lasting an average of 10.2 seconds. 
+            </font>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Bibtex</h2>
         <div class="content has-text-justified" style="margin-top: 20px">
           <pre><code>@ARTICLE{huang2024normalflow,
     author={Huang, Hung-Jui and Kaess, Michael and Yuan, Wenzhen},

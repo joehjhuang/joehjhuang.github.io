@@ -155,3 +155,10 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.flexbox {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;    /* Center items vertically */
+  gap: 10px;              /* Add spacing between items */
+}
