@@ -158,7 +158,23 @@ body {
 
 .flexbox {
   display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center;    /* Center items vertically */
-  gap: 10px;              /* Add spacing between items */
+  justify-content: space-between; /* Distribute buttons evenly with gaps */
+  align-items: center;           /* Align buttons vertically */
+  gap: 40px;                     /* Add 10px spacing between buttons */
+  margin-top: 20px;              /* Add spacing above the buttons */
+}
+
+.flexbox button {
+  flex: 1;                       /* Distribute width evenly among buttons */
+  max-width: 100px;              /* Limit the maximum width */
+  padding: 0;                    /* Remove default button padding */
+  border: none;                  /* Optional: Remove button borders */
+  background: none;              /* Optional: Transparent background */
+}
+
+.flexbox img {
+  display: block;                /* Ensure images are block-level for layout */
+  width: 100%;                   /* Make images take up full width of their container */
+  height: auto;                  /* Maintain aspect ratio */
+  object-fit: cover;             /* Crop the image to fit its container if necessary */
 }
