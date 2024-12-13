@@ -90,6 +90,15 @@
                 </a>
               </span>&nbsp;&nbsp;&nbsp;
               <span class="link-block">
+                <a href="https://arxiv.org/abs/2412.09617"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>&nbsp;&nbsp;&nbsp;
+              <span class="link-block">
                 <a href="https://github.com/rpl-cmu/normalflow"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -120,29 +129,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-
-      <div class="column" style="margin-right: 10px;">
-        <div class="content">
-          <video id="teaser_tracking" autoplay muted loop playsinline>
-            <source src="./videos/tracking.mp4" type="video/mp4">
-          </video>
-          <div class="content" style="margin-top: 10px;">
-            <h2 class="title is-5 has-text-centered">Tactile-based Object Tracking</h2>
-          </div>
-        </div>
+      <div class="column is-four-fifths">
+        <video id="real-time-demo" autoplay muted loop playsinline>
+          <source src="./videos/teaser.mp4" type="video/mp4">
+        </video>
       </div>
-
-      <div class="column" style="margin-left: 10px;">
-        <div class="content">
-          <video id="teaser_reconstruction" onmouseover="this.pause()" onmouseout="this.play()" autoplay="" muted="" loop="">
-            <source src="./videos/reconstruction.mp4" type="video/mp4">
-          </video>
-          <div class="content" style="margin-top: 10px;">
-            <h2 class="title is-5 has-text-centered">Tactile-based 3D Reconstruction</h2>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -219,7 +210,7 @@
         <div class="content has-text-justified" style="margin-top: 20px">
           <p class="has-text-centered">
             <font size="4.5">
-              <b>Got a <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a>? Install the <a href="https://github.com/rpl-cmu/normalflow">Code</a> and run NormalFlow live!</b>
+              <b>Got a <a href="https://www.gelsight.com/gelsightmini/">GelSight Mini</a>? Install the <a href="https://github.com/rpl-cmu/normalflow">Code</a> and run NormalFlow live! (Setup time < 5min)</b>
             </font>
           </p>
         </div>
@@ -336,7 +327,7 @@
               which are typically considered texture-less by human standards. NormalFlow can leverage subtle surface
               textures to robustly track these challenging objects.
               Quantitatively, it significantly outperforms all existing competitive baseline methods.
-              For further details, please refer to <a href="https://ieeexplore.ieee.org/document/1076662">our paper</a>.
+              For further details, please refer to <a href="https://ieeexplore.ieee.org/document/10766628">our paper</a>.
             </font>
           </p>
         </div>
@@ -356,7 +347,7 @@
     </div>
     <div class="columns is-centered has-text-centered is-four-fifths">
       <div class="column">
-        <video id="teaser_reconstruction" onmouseover="this.pause()" onmouseout="this.play()" autoplay="" muted="" loop="">
+        <video id="teaser_reconstruction" autoplay="" muted="" loop="">
           <source src="./videos/reconstruction.mp4" type="video/mp4">
         </video>
         <div class="content" style="margin-top: -10px; display: flex; align-items: center; justify-content: center;">
@@ -365,7 +356,7 @@
         </div>
       </div>
       <div class="column">
-        <video id="teaser_reconstruction" onmouseover="this.pause()" onmouseout="this.play()" autoplay="" muted="" loop="">
+        <video id="teaser_reconstruction" autoplay="" muted="" loop="">
           <source src="./videos/reconstruction_ring.mp4" type="video/mp4">
         </video>
         <div class="content" style="margin-top: -10px; display: flex; align-items: center; justify-content: center;">
