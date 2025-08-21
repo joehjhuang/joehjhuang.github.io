@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Discover GelSLAM: a state-of-the-art system for real-time, high-resolution, and robust 3D tactile SLAM using GelSight. Ideal for robotics, 3D reconstruction, manipulation, and in-hand manipulation.">
+        content="Discover GelSLAM: a state-of-the-art system for real-time, high-fidelity, and robust 3D tactile SLAM using GelSight. Ideal for robotics, 3D reconstruction, manipulation, and in-hand manipulation.">
   <meta name="keywords" content="3D reconstruction, tactile sensing, SLAM, Simultaneous Localization and Mapping, vision-based tactile sensors, object pose estimation, GelSight, GelSLAM, robotics, in-hand manipulation, contact-based tracking, dexterous manipulation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GelSLAM: A Real-Time, High-Resolution, and Robust 3D Tactile SLAM System</title>
+  <title>GelSLAM: A Real-time, High-Fidelity, and Robust 3D Tactile SLAM System</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -61,15 +61,19 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-3 publication-title">GelSLAM: A Real-Time, High-Resolution, and Robust 3D Tactile SLAM System</h1>
+          <h1 class="title is-3 publication-title">GelSLAM: A Real-Time, High-Fidelity, and Robust 3D Tactile SLAM System</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://joehjhuang.github.io/">Hung-Jui Huang</a><sup>1</sup>&nbsp;•&nbsp</span>
-            <span class="author-block">
-              <a href="https://siebelschool.illinois.edu/about/people/all-faculty/yuanwz">Wenzhen Yuan</a><sup>2</sup>&nbsp;•&nbsp
+              <a href="https://joehjhuang.github.io/">Hung-Jui Huang</a><sup>1</sup>&nbsp;•&nbsp
             </span>
             <span class="author-block">
-              <a href="https://www.cs.cmu.edu/~kaess/">Michael Kaess</a><sup>1</sup>
+              <a href="https://www.aminmirzaee.com/">Mohammad Amin Mirzaee</a><sup>2</sup>&nbsp;•&nbsp
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.cmu.edu/~kaess/">Michael Kaess</a><sup>1</sup>&nbsp;•&nbsp
+            </span>
+            <span class="author-block">
+              <a href="https://siebelschool.illinois.edu/about/people/all-faculty/yuanwz">Wenzhen Yuan</a><sup>2</sup>
             </span>
           </div>
 
@@ -80,8 +84,21 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
+              <span class="link-block">
+                <a href="http://arxiv.org/abs/2508.15990"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>&nbsp;&nbsp;&nbsp;
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
               <!-- PDF Link. -->
-              <span style="color: red;">[Paper, Code, and Dataset Coming Soon]</span>
+              <span style="color: red;">[An Updated Website (with More Videos), Code, and Dataset Are Coming Soon.]</span>
             </div>
 
           </div>
@@ -111,9 +128,9 @@
         <div class="content has-text-justified">
           <p>
             <font size="4"><b>TL;DR</b>: 
-              Extremely high-resolution, real-time 3D reconstruction using 
-              only tactile input. Also supports accurate tactile-based object
-              pose estimation for manipulation and dexterous manipulation tasks.
+              Extremely high-fidelity, real-time 3D reconstruction using 
+              only tactile input. Also supports accurate long-horizon tactile-based object
+              pose tracking for manipulation and dexterous manipulation tasks.
             </font>
           </p>
         </div>
@@ -123,19 +140,87 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <img src="assets/teaser.jpg" alt="teaser_img" style="width: 80%; height: auto;"/>
+        <div class="content has-text-justified" style="margin-top: 20px">
+          <p>
+            <font size="4">
+              Accurately perceiving an object's pose and shape is essential for precise grasping and manipulation. Compared to common vision-based methods, tactile sensing offers advantages in precision and immunity to occlusion when tracking and reconstructing objects in contact. This makes it particularly valuable for in-hand and other high-precision manipulation tasks.
+            </font>
+          </p>
+          <p>
+            <font size="4">
+              In this work, we present <em><b>GelSLAM</b></em>, a real-time 3D SLAM system that relies solely on tactile sensing to estimate object pose over long periods and reconstruct object shapes with high fidelity. Unlike traditional point cloud–based approaches, GelSLAM uses tactile-derived surface normals and curvatures for robust tracking and loop closure. It can track object motion in real time with low error and minimal drift, and reconstruct shapes with submillimeter accuracy, even for low-texture objects such as wooden tools.
+            </font>
+          </p>
+          <p>
+            <font size="4">
+              GelSLAM extends tactile sensing beyond local contact to enable global, long-horizon spatial perception, and we believe it will serve as a foundation for many precise manipulation tasks involving interaction with objects in hand.
+            </font>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Real-time Reconstruction Demo</h2>
-        <video id="real-time-demo" autoplay muted loop playsinline>
-          <source src="./videos/realtime_demo.mp4" type="video/mp4">
+        <h2 class="title is-3">Object Reconstruction Demo</h2>
+        <video id="real-time-demo" autoplay muted loop playsinline controls>
+          <source src="./videos/reconstruction_demo.mp4" type="video/mp4">
         </video>
+        <div class="content has-text-justified" style="margin-top: 20px">
+          <p>
+            <font size="4">
+              Reconstructing a peanut and a rock with the GelSight Mini sensor, and a tree trunk with the GelBelt sensor.
+            </font>
+          </p>
+        </div>
       </div>
     </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">More Objects Reconstructed</h2>
+        <img src="assets/reconstruction_result.jpg" alt="teaser_img" style="width: 100%; height: auto;"/>
+        <div class="content has-text-justified" style="margin-top: 20px">
+          <p>
+            <font size="4">
+              GelSLAM reconstruction results for the 15 objects, ordered roughly from largest to smallest.
+              <span style="color:red;">(Video coming soon)</span>
+            </font>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Reconstructed vs. Ground Truth</h2>
+        <img src="assets/reconstruction_quantitative_result.jpg" alt="teaser_img" style="width: 100%; height: auto;"/>
+        <div class="content has-text-justified" style="margin-top: 20px">
+          <p>
+            <font size="4">
+              Comparison between GelSLAM-reconstructed shapes and ground truth CAD models of 3D-printed objects.
+              <span style="color:red;">(Video coming soon)</span>
+            </font>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
 
 <footer class="footer">
   <div class="container">
