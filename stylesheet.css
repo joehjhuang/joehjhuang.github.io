@@ -29,8 +29,8 @@ h2 { font-size:1.35rem; font-weight:600; margin:52px 0 6px; padding-bottom:8px; 
 .exp-item .org { font-weight:600; color:var(--ink); }
 .pub { display:flex; gap:26px; padding:24px 0; border-bottom:1px solid var(--line); }
 .pub:last-child { border-bottom:none; }
-.pub-media { flex:0 0 195px; }
-.pub-media video, .pub-media img { width:195px; height:152px; object-fit:cover; border-radius:12px;
+.pub-media { flex:0 0 165px; }
+.pub-media video, .pub-media img { width:165px; height:165px; object-fit:cover; border-radius:12px;
   display:block; background:#f3f4f6; }
 .pub-title { font-weight:700; font-size:1.03rem; line-height:1.45; display:inline-block; }
 .pub-authors { margin-top:5px; font-size:.93rem; }
